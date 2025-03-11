@@ -32,13 +32,41 @@ class MainActivity : ComponentActivity() {
         setContent {
             My_first_androidTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
+                    Ejercicio_cubos(
                         name = "Angel",
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
             }
         }
+    }
+}
+@Composable
+fun Ejercicio_cubos(name: String, modifier: Modifier = Modifier) {
+    ConstraintLayout(modifier.fillMaxSize()) {
+        val (boxRed, boxYellow, boxGreen, boxCyan, boxMagenta) = createRefs()
+        Box(modifier = Modifier.size(120.dp).background(Color.Red).constrainAs(boxRed) {
+            top.linkTo(parent.top)
+            bottom.linkTo(parent.bottom)
+            start.linkTo(parent.start)
+            end.linkTo(parent.end)
+        })
+        Box(modifier = Modifier.size(120.dp).background(Color.Yellow).constrainAs(boxYellow){
+            bottom.linkTo(boxRed.top)
+            end.linkTo(boxRed.start)
+        })
+        Box(modifier = Modifier.size(120.dp).background(Color.Green).constrainAs(boxGreen){
+            bottom.linkTo(boxRed.top)
+            start.linkTo(boxRed.end)
+        })
+        Box(modifier = Modifier.size(120.dp).background(Color.Cyan).constrainAs(boxCyan){
+            top.linkTo(boxRed.bottom)
+            end.linkTo(boxRed.start)
+        })
+        Box(modifier = Modifier.size(120.dp).background(Color.Magenta).constrainAs(boxMagenta){
+            top.linkTo(boxRed.bottom)
+            start.linkTo(boxRed.end)
+        })
     }
 }
 
@@ -96,8 +124,8 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 }*/
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-fun GreetingPreview() {
+fun Preview() {
     My_first_androidTheme {
-        Greeting("Angel")
+        Ejercicio_cubos("Angel")
     }
 }
