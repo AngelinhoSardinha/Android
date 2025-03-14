@@ -85,7 +85,7 @@ fun Ejercicio_1(modifier: Modifier) {
     }
 }
 
-/*@Composable
+@Composable
 fun Ejercicio_clase(modifier: Modifier) {
     Column(modifier.fillMaxSize()) {
         Row(
@@ -180,9 +180,9 @@ fun Ejercicio_clase(modifier: Modifier) {
             }
         }
     }
-}*/
+}
 
-/*@Composable
+@Composable
 fun Ejercicio_cubos(name: String, modifier: Modifier = Modifier) {
     ConstraintLayout(modifier.fillMaxSize()) {
         val (boxRed, boxYellow, boxGreen, boxCyan, boxMagenta) = createRefs()
@@ -209,9 +209,9 @@ fun Ejercicio_cubos(name: String, modifier: Modifier = Modifier) {
             start.linkTo(boxRed.end)
         })
     }
-}*/
+}
 
-/*@Composable
+@Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     ConstraintLayout(modifier.fillMaxSize()) {
         val (boxRed, boxYellow, boxGreen, boxCyan, boxMagenta) = createRefs()
@@ -243,7 +243,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         contentDescription = "PIPIPI",
         alpha = 0.5f
     )
-}*/
+}
 
 
 /*fun Greeting(name: String, modifier: Modifier = Modifier) {
@@ -270,6 +270,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun Preview() {
     My_first_androidTheme {
-        Ejercicio_1(modifier = Modifier)
+        Ejercicio_clase(modifier = Modifier)
     }
 }
