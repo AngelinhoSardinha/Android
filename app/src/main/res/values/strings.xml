@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">My_first_android</string>
+    <string name="texto1">El total de la propina que vas a dar es el siguiente:</string>
+    <string name="camarero">El camarero te lo agradece infinitamente</string>
+    <string name="total">Coloca el precio total del menú</string>
+    <string name="porcentaje">Cuál es el porcentaje de propina?</string>
+    <string name="montoTotal">El monto total con la propina incluida es el siguiente: </string>
+    <string name="dimeNombre">Digame su nombre</string>
+    <string name="nacimiento">Digame su año de nacimiento</string>
+    <string name="altura">Digame su altura</string>
+    <string name="peso">Digame su peso</string>
+    <string name="insuficiente">Eres un fucking flaco bro</string>
+    <string name="normal">NORMAL</string>
+    <string name="sobrePeso">Estas un poco pasado BB</string>
+    <string name="gordo">DEJAD DE COMER GORDOOOOO</string>
+    <string name="imc">Tu IMC es: </string>
 </resources>
