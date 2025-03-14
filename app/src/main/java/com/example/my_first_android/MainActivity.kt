@@ -42,9 +42,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             My_first_androidTheme {
                 //Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                Ejercicio_1(
-                    modifier = Modifier.padding(12.dp)
-                )
+                MyStateExample()
                 //}
             }
         }
