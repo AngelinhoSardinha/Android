@@ -14,4 +14,9 @@
     <string name="sobrePeso">Estas un poco pasado BB</string>
     <string name="gordo">DEJAD DE COMER GORDOOOOO</string>
     <string name="imc">Tu IMC es: </string>
+    <string name="adivina">¿Qué número quiere decir?</string>
+    <string name="menos">El número que has elegido es mayor al que tienes que adivinar</string>
+    <string name="igual">EL NUMERO ES IGUAL, QUE BIEN!!! </string>
+    <string name="mayor">El numero que has elegido es menor al que tienes que adivinar XD</string>
+    <string name="convertirr">Qué número deseas convertir</string>
 </resources>
