@@ -512,7 +512,7 @@ fun DiceRollerApp() {
         Image(
             painter = painterResource(id = R.drawable.title),
             contentDescription = "titulo",
-            modifier = Modifier.fillMaxWidth().size(300.dp)
+            modifier = Modifier.fillMaxWidth().size(400.dp)
         )
 
         Button(onClick = {
@@ -553,7 +553,7 @@ fun DiceImage(dice: Int, onClick: () -> Unit) {
         painter = painterResource(id = diceImage),
         contentDescription = "Dado $dice",
         modifier = Modifier
-            .size(100.dp)
+            .size(200.dp)
             .clickable { onClick() }
     )
 }
