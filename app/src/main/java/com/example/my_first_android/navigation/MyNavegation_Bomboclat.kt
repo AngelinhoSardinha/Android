@@ -1,9 +1,32 @@
 package com.example.my_first_android.navigation
 
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHost
 import androidx.navigation.compose.rememberNavController
+import com.example.my_first_android.DiceRollerApp
+import com.example.my_first_android.Ejercicio_clase
+import com.example.my_first_android.screens.Screen1
+import com.example.my_first_android.ui.theme.My_first_androidTheme
 
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        //enableEdgeToEdge()
+        setContent {
+            My_first_androidTheme {
+                //Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                DiceRollerApp()
+                //}
+            }
+        }
+    }
+}
+/*
 @Composable
 fun MyNavegation() {
     val navController = rememberNavController()
@@ -20,4 +43,4 @@ fun MyNavegation() {
                 popUpTo<Pantalla1>{ inclusive= true } } }
         }
     }
-}
+}*/
