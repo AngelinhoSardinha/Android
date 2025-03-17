@@ -42,6 +42,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHost
+import com.example.my_first_android.navigation.Pantalla1
 import com.example.my_first_android.ui.theme.My_first_androidTheme
 import kotlin.random.Random
 
@@ -545,6 +547,7 @@ fun DiceImage(dice: Int, onClick: () -> Unit) {
             .clickable { onClick() }
     )
 }
+
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable

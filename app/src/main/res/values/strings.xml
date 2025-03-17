@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My_first_android</string>
+    <string name="app_name">Dados</string>
     <string name="texto1">El total de la propina que vas a dar es el siguiente:</string>
     <string name="camarero">El camarero te lo agradece infinitamente</string>
     <string name="total">Coloca el precio total del menú</string>
