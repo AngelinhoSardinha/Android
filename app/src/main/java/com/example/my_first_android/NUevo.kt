@@ -22,6 +22,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonColors
+import androidx.compose.material3.ButtonDefaults.buttonColors
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.OutlinedTextField
@@ -358,7 +360,9 @@ fun conversiones() {
         )
     }
     Column(
-        Modifier.fillMaxWidth().fillMaxSize(),
+        Modifier
+            .fillMaxWidth()
+            .fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -417,26 +421,28 @@ fun conversiones() {
         }
     }
 }
-fun km_milla(valor: Double) : Double {
+
+fun km_milla(valor: Double): Double {
     return valor / 1.60934
 }
 
-fun m_yarda(valor: Double) : Double {
+fun m_yarda(valor: Double): Double {
     return valor / 0.9144
 }
-fun cm_pulgada(valor: Double) : Double {
+
+fun cm_pulgada(valor: Double): Double {
     return valor / 2.54
 }
 
-fun millas_km(valor: Double) : Double {
+fun millas_km(valor: Double): Double {
     return valor * 1.60934
 }
 
-fun pulgada_cm(valor : Double) : Double {
+fun pulgada_cm(valor: Double): Double {
     return valor * 2.54
 }
 
-fun yarda_m(valor : Double) : Double {
+fun yarda_m(valor: Double): Double {
     return valor * 0.9144
 }
 
@@ -475,6 +481,7 @@ fun LlimonadaApp() {
                                 clicsActuals = 0
                             }
                         }
+
                         3 -> fase = 4
                         4 -> {
                             fase = 1
@@ -497,16 +504,28 @@ fun DiceRollerApp() {
         modifier = Modifier.fillMaxSize(),
         contentScale = ContentScale.FillBounds
     )
-    Image(
-        painter = painterResource(id = R.drawable.title),
-        contentDescription = "titulo",
-        modifier = Modifier.fillMaxWidth()
-    )
     Column(
-        modifier = Modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
+        Modifier.fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
     ) {
+        Image(
+            painter = painterResource(id = R.drawable.title),
+            contentDescription = "titulo",
+            modifier = Modifier.fillMaxWidth().size(300.dp)
+        )
+
+        Button(onClick = {
+            dice1 = Random.nextInt(1, 7)
+            dice2 = Random.nextInt(1, 7)
+
+            if (dice1 == 6 && dice2 == 6) {
+                Toast.makeText(context, "JACKPOT!", Toast.LENGTH_SHORT).show()
+            }
+        }, colors = buttonColors(containerColor = Color.Red)) {
+            Text("ROLL THE DICE")
+        }
+
         Row(
             modifier = Modifier.padding(16.dp),
             horizontalArrangement = Arrangement.spacedBy(16.dp),
@@ -516,16 +535,6 @@ fun DiceRollerApp() {
             DiceImage(dice = dice2) { dice2 = Random.nextInt(1, 7) }
         }
 
-        Button(onClick = {
-            dice1 = Random.nextInt(1, 7)
-            dice2 = Random.nextInt(1, 7)
-
-            if (dice1 == 6 && dice2 == 6) {
-                Toast.makeText(context, "JACKPOT!", Toast.LENGTH_SHORT).show()
-            }
-        }) {
-            Text("ROLL THE DICE")
-        }
     }
 }
 

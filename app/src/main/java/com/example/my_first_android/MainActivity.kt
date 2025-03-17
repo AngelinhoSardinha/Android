@@ -42,7 +42,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             My_first_androidTheme {
                 //Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                LlimonadaApp()
+                DiceRollerApp()
                 //}
             }
         }
